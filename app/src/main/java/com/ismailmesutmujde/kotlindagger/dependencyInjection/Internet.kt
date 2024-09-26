@@ -1,9 +1,9 @@
 package com.ismailmesutmujde.kotlindagger.dependencyInjection
 
 import android.util.Log
+import javax.inject.Inject
 
-class Internet {
-    var address = Address("Sarıçam/Adana")
+class Internet @Inject constructor(var address: Address) {
     fun makeApplication() {
         Log.e("Result", "Internet application was made for ${address.addressInfo} address")
     }
